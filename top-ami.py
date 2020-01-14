@@ -5,8 +5,13 @@ generate a human readable list of most popular AWS ami images used for running i
 
 import boto3
 from collections import Counter
+import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument("AWS_PROFILE", default='default', nargs="?", help="which aws profile configured in ~/.aws/credentials should we use?")
 
-boto_connection = boto3.session.Session(profile_name='default')
+args = parser.parse_args()
+
+boto_connection = boto3.session.Session(profile_name=args.AWS_PROFILE)
 """
 replace 'default', with what ever aws account profile you wantto use in your
 '~/.aws/credentials' file
@@ -55,7 +60,7 @@ def main():
     the business end of this tool.
     loops over the top AMI touple and builds up the entire output.
     """
-    for element in top_amis(5):
+    for element in top_amis(100):
         print("creation_date:",
               ami_info(element[0])[0], "description:",
               ami_info(element[0])[1], "ami_id:", element[0], element[1],
