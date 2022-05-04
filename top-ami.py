@@ -9,6 +9,7 @@ import boto3
 from collections import Counter
 import argparse
 import json
+import sys
 
 parser = argparse.ArgumentParser()
 parser.add_argument("AWS_PROFILE", default='default', nargs="?", help="which aws profile configured in ~/.aws/credentials should we use?")
@@ -93,4 +94,6 @@ def main():
     print(json_data)
 
 
-main()
+
+if __name__ == "__main__":
+    sys.exit(main())

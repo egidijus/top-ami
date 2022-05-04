@@ -4,7 +4,7 @@
 SHELL := /usr/bin/env bash
 # BUILD_DATE := $(shell date -u +%Y-%m-%d-%H%M)
 
-EXECUTABLES = virtualenv python3 pip jq
+EXECUTABLES = virtualenv python3 pip
 
 thepackages := $(foreach exec,$(EXECUTABLES),\
         $(if $(shell which $(exec)),some string,$(error "Mate, I cannot find " $(exec) " in PATH, either intstall $(exec) or update your paths")))
