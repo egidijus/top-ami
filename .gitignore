@@ -1,0 +1,13 @@
+# python
+__pycache__
+/*.egg-info
+*.py[c,o]
+*$py.class
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+.installed.cfg
+*.egg
+MANIFEST
+venv/*
+.vscode
