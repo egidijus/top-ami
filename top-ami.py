@@ -8,6 +8,7 @@ generate a human readable list of most popular AWS ami images used for running i
 import boto3
 from collections import Counter
 import argparse
+
 import json
 import sys
 
@@ -74,7 +75,9 @@ def main():
     loops over the top AMI list and builds up the entire output.
     The output is a valid json that can be accessed with jq.
     """
+    
     nice_top_ami_list = [[*row] for row in top_amis()]
+    
     """
     We flatten the touple to a list.
     """
