@@ -2,7 +2,7 @@ asttokens==2.0.5
 boto3==1.22.7
 botocore==1.25.7
 colorama==0.4.6
-executing==0.8.3
+executing==1.2.0
 jmespath==1.0.0
 Pygments==2.12.0
 python-dateutil==2.8.2
