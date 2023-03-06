@@ -1,5 +1,5 @@
 asttokens==2.0.5
-boto3==1.22.7
+boto3==1.26.84
 botocore==1.29.46
 colorama==0.4.6
 executing==1.2.0
